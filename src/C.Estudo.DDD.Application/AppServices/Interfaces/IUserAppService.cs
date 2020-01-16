@@ -6,10 +6,10 @@ namespace C.Estudo.DDD.Application.AppServices.Interfaces
 {
     public interface IUserAppService
     {
-        UserViewModel Get(Guid id);
-        IList<UserViewModel> List();
-        UserViewModel Insert(UserViewModel user);
-        void Update(UserViewModel user);
-        void Delete(UserViewModel user);
+        UserEntryViewModel Get(Guid id);
+        IList<UserEntryViewModel> GetAll();
+        UserReturnViewModel Insert(UserEntryViewModel user);
+        void Update(UserEntryViewModel user);
+        void Delete(UserEntryViewModel user);
     }
 }

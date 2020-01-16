@@ -1,6 +1,4 @@
-﻿using Flunt.Validations;
-
-namespace C.Estudo.DDD.Domain.ValueObjects
+﻿namespace C.Estudo.DDD.Domain.ValueObjects
 {
     public class Name : ValueObject
     {
@@ -17,11 +15,6 @@ namespace C.Estudo.DDD.Domain.ValueObjects
 
         private void Validate()
         {
-            AddNotifications(new Contract()
-                .Requires()
-                .IsNotNullOrEmpty(FirstName, "Name.FirstName", "Inform First Name")
-                .IsNotNullOrEmpty(LastName, "Name.LastName", "Inform Last Name")
-            );
         }
     }
 }

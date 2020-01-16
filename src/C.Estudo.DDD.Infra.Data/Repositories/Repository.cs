@@ -34,7 +34,7 @@ namespace C.Estudo.DDD.Infra.Data.Repositories
             _context.SaveChanges();
         }
 
-        public IList<T> List()
+        public IList<T> GetAll()
         {
             return _context.Set<T>().AsNoTracking().ToList();
         }

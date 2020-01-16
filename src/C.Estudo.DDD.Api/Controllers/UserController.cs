@@ -22,9 +22,9 @@ namespace C.Estudo.DDD.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<IEnumerable<UserViewModel>> GetAll()
+        public ActionResult<IEnumerable<UserEntryViewModel>> GetAll()
         {
-            return Ok(_userAppService.List());
+            return Ok(_userAppService.GetAll());
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace C.Estudo.DDD.Api.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}", Name = "Get")]
-        public ActionResult<UserViewModel> Get(Guid id)
+        public ActionResult<UserEntryViewModel> Get(Guid id)
         {
             return Ok(_userAppService.Get(id));
         }
@@ -43,7 +43,7 @@ namespace C.Estudo.DDD.Api.Controllers
         /// </summary>
         /// <param name="user"></param>
         [HttpPost]
-        public ActionResult<UserViewModel> Post([FromBody] UserViewModel user)
+        public ActionResult<UserEntryViewModel> Post([FromBody] UserEntryViewModel user)
         {
             var userViewModel = _userAppService.Insert(user);
             if (userViewModel.Invalid)
@@ -58,7 +58,7 @@ namespace C.Estudo.DDD.Api.Controllers
         /// <param name="id"></param>
         /// <param name="user"></param>
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] UserViewModel user)
+        public IActionResult Put(int id, [FromBody] UserEntryViewModel user)
         {
             _userAppService.Update(user);
             return Ok();
@@ -69,7 +69,7 @@ namespace C.Estudo.DDD.Api.Controllers
         /// </summary>
         /// <param name="id"></param>
         [HttpDelete("{id}")]
-        public IActionResult Delete([FromBody] UserViewModel user)
+        public IActionResult Delete([FromBody] UserEntryViewModel user)
         {
             _userAppService.Delete(user);
             return Ok();

@@ -7,7 +7,7 @@ namespace C.Estudo.DDD.Domain.Interfaces.Repositories
     public interface IRepository<T> where T : class
     {
         T Get(Guid id);
-        IList<T> List();
+        IList<T> GetAll();
         IList<T> List(Expression<Func<T, bool>> expression);
         void Insert(T entity);
         void Update(T entity);

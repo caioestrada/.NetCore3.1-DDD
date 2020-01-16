@@ -1,4 +1,4 @@
-﻿using Flunt.Validations;
+﻿using C.Estudo.DDD.Domain.Validations.UserValidator;
 
 namespace C.Estudo.DDD.Domain.Entities
 {
@@ -14,17 +14,7 @@ namespace C.Estudo.DDD.Domain.Entities
             LastName = lastName;
             Email = email;
 
-            Validate();
-        }
-
-        private void Validate()
-        {
-            AddNotifications(new Contract()
-                .Requires()
-                .IsNotNullOrEmpty(FirstName, "User.FirstName", "Inform First Name")
-                .IsNotNullOrEmpty(LastName, "User.LastName", "Inform Last Name")
-                .IsEmail(Email, "User.Email", "Invalid Email")
-            );
+            Validate(new UserValidator().Validate(this));
         }
     }
 }

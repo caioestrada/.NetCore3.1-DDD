@@ -8,10 +8,12 @@ namespace C.Estudo.DDD.Application.AutoMapper
     {
         public AutoMapperConfig()
         {
-            CreateMap<Entity, ViewModel>()
+            CreateMap<ReturnViewModel, Entity>()
                 .ReverseMap();
 
-            CreateMap<UserViewModel, User>()
+            CreateMap<UserEntryViewModel, User>()
+                .ReverseMap();
+            CreateMap<UserReturnViewModel, User>()
                 .ReverseMap();
         }
     }

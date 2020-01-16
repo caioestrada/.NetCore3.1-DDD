@@ -17,29 +17,27 @@ namespace C.Estudo.DDD.Application.AppServices.Services
             _userService = userService;
         }
 
-        public void Delete(UserViewModel user)
+        public void Delete(UserEntryViewModel user)
         {
             _userService.Delete(_mapper.Map<User>(user));
         }
 
-        public UserViewModel Get(Guid id)
+        public UserEntryViewModel Get(Guid id)
         {
-            return _mapper.Map<UserViewModel>(_userService.Get(id));
+            return _mapper.Map<UserEntryViewModel>(_userService.Get(id));
         }
 
-        public UserViewModel Insert(UserViewModel user)
+        public UserReturnViewModel Insert(UserEntryViewModel userViewModel)
         {
-            var userDomain = _mapper.Map<User>(user);
-            var userViewModel = _mapper.Map<UserViewModel>(_userService.Insert(userDomain));
-            return userViewModel;
+            return _mapper.Map<User, UserReturnViewModel>(_userService.Insert(_mapper.Map<UserEntryViewModel, User>(userViewModel)));
         }
 
-        public IList<UserViewModel> List()
+        public IList<UserEntryViewModel> GetAll()
         {
-            return _mapper.Map<IList<UserViewModel>>(_userService.List());
+            return _mapper.Map<IList<UserEntryViewModel>>(_userService.List());
         }
 
-        public void Update(UserViewModel user)
+        public void Update(UserEntryViewModel user)
         {
             _userService.Update(_mapper.Map<User>(user));
         }

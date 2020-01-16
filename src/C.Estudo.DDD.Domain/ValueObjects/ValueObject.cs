@@ -1,8 +1,6 @@
-﻿using Flunt.Notifications;
-
-namespace C.Estudo.DDD.Domain.ValueObjects
+﻿namespace C.Estudo.DDD.Domain.ValueObjects
 {
-    public class ValueObject : Notifiable
+    public class ValueObject
     {
     }
 }

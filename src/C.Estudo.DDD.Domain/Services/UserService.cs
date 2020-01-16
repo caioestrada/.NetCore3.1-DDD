@@ -35,7 +35,7 @@ namespace C.Estudo.DDD.Domain.Services
 
         public IList<User> List()
         {
-            return _userRepository.List();
+            return _userRepository.GetAll();
         }
 
         public void Update(User user)

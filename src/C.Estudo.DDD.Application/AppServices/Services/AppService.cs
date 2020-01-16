@@ -6,9 +6,6 @@ namespace C.Estudo.DDD.Application.AppServices.Services
     {
         protected readonly IMapper _mapper;
 
-        public AppService(IMapper mapper)
-        {
-            _mapper = mapper;
-        }
+        public AppService(IMapper mapper) => _mapper = mapper;
     }
 }

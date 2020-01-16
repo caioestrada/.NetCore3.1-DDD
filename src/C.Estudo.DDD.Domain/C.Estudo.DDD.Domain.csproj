@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Flunt" Version="1.0.4" />
+    <PackageReference Include="FluentValidation" Version="8.6.1" />
   </ItemGroup>
 
 </Project>
