@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.Estudo.DDD.Infra.CrossCut
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.Estudo.DDD.Api", "src\C.Estudo.DDD.Api\C.Estudo.DDD.Api.csproj", "{21F1BD90-4E07-4955-989F-6EBD3106B54B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.Estudo.DDD.Domain.Test", "test\C.Estudo.DDD.Domain.Test\C.Estudo.DDD.Domain.Test.csproj", "{5F0041F8-1827-4A4B-B3EC-F70D58ECE7D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{21F1BD90-4E07-4955-989F-6EBD3106B54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F1BD90-4E07-4955-989F-6EBD3106B54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F1BD90-4E07-4955-989F-6EBD3106B54B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0041F8-1827-4A4B-B3EC-F70D58ECE7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0041F8-1827-4A4B-B3EC-F70D58ECE7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0041F8-1827-4A4B-B3EC-F70D58ECE7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0041F8-1827-4A4B-B3EC-F70D58ECE7D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{9B89F9B6-2C3C-40AA-B7C7-FFF79061FC6E} = {5F38A8F4-7ADE-4C25-8BAE-7E98DF9F624C}
 		{59EEAA1C-94F5-4F30-964A-53217512E0EA} = {EE43ADA4-7C4E-4B3A-B66E-C75155A4D37A}
 		{21F1BD90-4E07-4955-989F-6EBD3106B54B} = {A8935438-B588-49A7-9728-5625AF320228}
+		{5F0041F8-1827-4A4B-B3EC-F70D58ECE7D8} = {3C8D4546-54B7-49E9-AE55-C425EC77585B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6E1E13E9-BEFF-4618-ADBA-F007960D88F3}
